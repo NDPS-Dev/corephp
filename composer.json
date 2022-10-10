@@ -1,0 +1,20 @@
+{
+    "name": "ndps/corephp",
+    "description": "NTT DATA Payment Services Core PHP Composer package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NTT DATA Payment Services India"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+             "NDPS": "src/"
+         }
+    },
+    "require": {
+        "php": ">=5.6"
+    }
+}
