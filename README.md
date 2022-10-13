@@ -1,5 +1,5 @@
 # atomlite/corephp
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.org/)](https://travis-ci.org/)
 
 Official CorePHP library for NTT DATA Payment Service.
 
