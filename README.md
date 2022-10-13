@@ -1,19 +1,32 @@
-# corephp
-NTT DATA Payment Services Core PHP Composer package
+# atomlite/corephp
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Follow the below steps to integrate the package:
-1. Use below cmd to install the package using composer
-   composer require ndps/codeigniter
+Official CorePHP library for NTT DATA Payment Service.
 
-2. To handle the request use below function which will provide the request URL.
-   
-  
-         public function payment()
+## Prerequisites
+- A minimum of PHP 7.3 upto 8.1
+
+## Installation
+- If your project using composer, run the below command 
+    
+    ```sh
+    composer require ndps/codeigniter
+    ```
+
+- If you are not using composer, download the latest release from the releases section. You should download the corephp.zip file. And place in vendor folder.
+
+
+## How To Use It
+
+- To handle the request use below function which will provide the request URL.
+
+    ```sh
+        public function payment()
          {
           include_once APPPATH . 'vendor/autoload.php';
           $transactionRequest = new \NDPS\TransactionRequest();
 
-          // Add your return URL
+          /* Add your return URL */
           $ru = "http://localhost:8081/Package/CI/response";
 
           /*
@@ -41,11 +54,12 @@ Follow the below steps to integrate the package:
           $url = $transactionRequest->getPGUrl();
           header("Location: $url");
          }
-   
-3. To handle the response use below function which will return the final response array.
-         
-         
-         public function response()
+    ```
+    
+- To handle the response use below function which will return the final response array.
+
+    ```sh
+        public function response()
          {
           include_once APPPATH . 'vendor/autoload.php';
           $transactionResponse = new \NDPS\TransactionResponse();
@@ -83,3 +97,4 @@ Follow the below steps to integrate the package:
            print_r($arrayofdata);
 
         }   
+    ```
