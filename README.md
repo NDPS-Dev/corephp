@@ -1,4 +1,4 @@
-# atomlite/corephp
+# NDPS-Dev/corephp
 
 Official CorePHP library for NTT DATA Payment Service.
 
